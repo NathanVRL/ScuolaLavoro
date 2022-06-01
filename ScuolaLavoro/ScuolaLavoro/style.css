@@ -1,0 +1,68 @@
+.titolo{
+    text-align: center;
+    font-size: 60px;
+    color: #CCCCFF;
+    text-decoration: none;
+    font-family: 'Anton', sans-serif;
+                                                
+}
+body{
+    background-color: black;
+}
+.nome{
+    text-align: center;
+    font-size: 45px;
+    font-family: 'Anton', sans-serif;
+    color: #CCCCFF;
+}
+.voto{
+    font-size: 30px;
+    font-family: 'Anton', sans-serif;
+    color: #CCCCFF;
+    padding-bottom: 10%;
+    text-align: right;
+}
+.dropdown {
+
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+.stella{
+width: 50px;
+float:right;
+padding-bottom: 10%;
+}
+.view{
+    font-size: 30px;
+    color: #CCCCFF;
+}
+.viewimg{
+    width: 50px;
+
+}
+.lingua{
+    font-size: 30px;
+    color: #CCCCFF;
+
+}
+.linguaOG{
+
+    width: 50px;
+
+}
+.datarilascio{
+    font-size: 25px;
+    color: #CCCCFF;
+}
