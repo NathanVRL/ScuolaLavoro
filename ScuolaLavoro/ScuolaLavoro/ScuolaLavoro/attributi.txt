@@ -1,0 +1,129 @@
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card" style="background-color: black;">
+      <div class="card-body">
+                <div class="card-body" style="background-color: black;">
+                <p class="view"><img v-bind:src="view" class="viewimg">  {{movie.popularity}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card style="background-color: black;"">
+
+      <div class="card-body">
+             <p class="lingua"><img v-bind:src="linguaOG " class="linguaOG">lingua originale  {{movie.original_language}}
+            
+      </div>
+    </div>
+       <div class="card style="background-color: black;"">
+
+      <div class="card-body">
+                <p class="voto">voto {{movie.vote_average}}/10<img v-bind:src="Image"class="stella"></p> 
+              
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+            <div class="card-group">
+              <div class="card " style="background-color: black;">
+            
+                <div class="card-body" style="background-color: black;">
+                <p class="view"><img v-bind:src="view" class="viewimg">  {{movie.popularity}}</p>
+            
+                </div>
+              </div>
+              <div class="card" style="background-color: black;">
+                
+                <div class="card-body" style="background-color: black;">
+             <p class="lingua"><img v-bind:src="linguaOG " class="linguaOG">lingua originale  {{movie.original_language}}
+                </div>
+              </div>
+              <div class="card "style="background-color: black;">
+                <div class="card-body"style="background-color: black;">
+                <p class="voto">voto {{movie.vote_average}}/10<img v-bind:src="Image"class="stella"></p> 
+                </div>
+              </div>
+            </div>
+
+
+
+
+            edfjsahfhdfsa
+
+
+
+            app.component('Listafilm', {
+    template: 
+      /*html*/ 
+      `
+     
+  <  <div class="row">
+  <div class="col-sm-3 " v-for="movie in movies">
+    <div style="background-color: black;">
+      <div class="card-body">
+       <img  name="imagine" v-bind:src="image_path(movie.poster_path)" class="card-img-top"  onmouseover="figo(this)" onmouseout="nofigo(this)">
+        <div>
+
+
+          <div class="card-group">
+
+
+            <div class="card " style="background-color: black;">
+                
+              <div class="card-body" style="background-color: black;">
+              <p class="view"><img v-bind:src="view" class="viewimg">  {{movie.popularity}}</p>
+              </div>
+
+            </div>
+
+
+
+            <div class="card" style="background-color: black;">
+              
+              <div class="card-body" style="background-color: black;">
+              <p class="lingua"><img v-bind:src="linguaOG " class="linguaOG">lingua originale  {{movie.original_language}}
+              </div>
+
+            </div>
+
+            <div class="card "style="background-color: black;">
+
+              <div class="card-body"style="background-color: black;">
+              <p class="voto">voto {{movie.vote_average}}/10<img v-bind:src="Image"class="stella"></p> 
+              </div>
+
+            </div>
+
+          </div>
+      <div class="accordion" id="accordionExample" v-if="movie.overview!=''" style="background-color: black;">
+
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne" style="color: #CCCCFF;">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="background-color: black;color: #CCCCFF;">
+              Trama
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample" style="background-color: black;">
+            <div class="accordion-body" style="color: #CCCCFF;">
+             {{movie.overview}} 
+            </div>
+          </div>
+        </div>
+      
+      
+      
+      
+      <p class="datarilascio">rilasciato il {{movie.first_air_date}}</p>
+
+      </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  <button type="button" class="btn btn-outline-primary" onclick="caricamento(this)">Primary</button>
+</div>
+
+`
+  })
