@@ -10,7 +10,8 @@ const app = Vue.createApp({
             Image:'image/star-628933_1280.webp',
             view:'image/occhio.png',
             linguaOG:'image/linguaog.png',
-            migliori:[]
+            addPage:[],
+            miglioriFilm:[]
 
         }
     },
@@ -19,14 +20,15 @@ const app = Vue.createApp({
     },
     methods:{
 
-    getpost() 
-            {  
+    getpost() {  
                 return fetch('https://api.themoviedb.org/3/tv/popular?api_key='+this.api_key+'&language='+this.language+'&page='+this.page)
                     .then(res =>res.json())  
                     .then(post=>{
                         console.log(post)
                         this.movies=post.results
+
                     })
+
                           
 
             },
@@ -35,41 +37,30 @@ const app = Vue.createApp({
 
                 return 'https://image.tmdb.org/t/p/original'+poster_path
     
+            },
+        async newGetpost(){
+            this.page+=1
+            const res = await fetch('https://api.themoviedb.org/3/tv/popular?api_key=' + this.api_key + '&language=' + this.language + '&page=' + this.page)
+            const post = await res.json()
+            console.log(post)
+            this.addPage = post.results
+            for (let i = 0; i < 20; i++) {
+            this.movies.push(this.addPage[i])
+                
             }
 
+        }
         },
+        
     created(){
         this.getpost()
-    },
-    sortArray(){
-        return x.populatity.localeCompare(y.populatity);
-    },
-    ricerca(){
-        var x = document.getElementById("myInput");
-        for (let i = 0; i < movies.length; i++) {
-            if(x.textContent==movies[i].textContent){
-               return true
-            }else{
-                return false
-            }
-            
-        }
-    }
 
-    
+        },
 
 
 })
-app.get
-function figo(x){
-x.style.opacity="0.2"
-}
 
 
-function nofigo(x,nome){
-    x.style.opacity="1"
-    x.innerHTML
-}
 
 app.mount('#app')
 

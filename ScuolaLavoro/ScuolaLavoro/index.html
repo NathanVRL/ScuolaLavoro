@@ -10,7 +10,8 @@
 
 <body>
   <div id="app">
-  <nav class="navbar navbar-expand-lg " style="background-color: black;">
+  <nav class="navbar navbar-expand-lg " style="background-color: #ccffe6;
+  ;">
 
     <div class="container-fluid">
       <a class=" titolo" href="#">NATFLIX</a>
@@ -29,32 +30,45 @@
 
  
   <div class="row">
-    <div class="col-sm-6 " v-for="movie in movies">
-      <div style="background-color: black;">
+
+    <div class="col-sm-4 " v-for="movie in movies">
+      <div style="background-color: #ccffe6;">
         <div class="card-body">
-          <img  name="imagine" v-bind:src="image_path(movie.poster_path)" class="card-img-top"  onmouseover="figo(this)" onmouseout="nofigo(this)">
+         <img  name="imagine" v-bind:src="image_path(movie.poster_path)" class=" immaginifilm card-img-top" >
           <div>
+
+
             <div class="card-group">
-              <div class="card " style="background-color: black;">
-            
-                <div class="card-body" style="background-color: black;">
+
+
+              <div class="card " style="background-color: #ccffe6;">
+
+                <div class="card-body" style="background-color: #ccffe6;">
                 <p class="view"><img v-bind:src="view" class="viewimg">  {{movie.popularity}}</p>
-            
                 </div>
+
               </div>
-              <div class="card" style="background-color: black;">
+
+
+
+              <div class="card" style="background-color: #ccffe6;">
                 
-                <div class="card-body" style="background-color: black;">
-             <p class="lingua"><img v-bind:src="linguaOG " class="linguaOG">lingua originale  {{movie.original_language}}
+                <div  style="background-color: #ccffe6;">
+                <p class="lingua"><img v-bind:src="linguaOG " class="linguaOG">lingua originale  {{movie.original_language}}
                 </div>
+
               </div>
-              <div class="card "style="background-color: black;">
-                <div class="card-body"style="background-color: black;">
+
+              <div class="card "style="background-color: #ccffe6;">
+
+                <div style="background-color: #ccffe6;">
                 <p class="voto">voto {{movie.vote_average}}/10<img v-bind:src="Image"class="stella"></p> 
                 </div>
+
               </div>
+
             </div>
-        <div class="accordion" id="accordionExample" v-if="movie.overview!=''" style="background-color: black;">
+        <div class="accordion" id="accordionExample" v-if="movie.overview!=''" style="background-color: #ccffe6;">
 
           <div class="accordion-item">
             <h2 class="accordion-header" id="headingOne" style="color: #CCCCFF;">
@@ -79,15 +93,36 @@
         </div>
       </div>
     </div>
-
+    <div class="card col-sm-4" aria-hidden="true">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title placeholder-glow">
+          <span class="placeholder col-6"></span>
+        </h5>
+        <p class="card-text placeholder-glow">
+          <span class="placeholder col-7"></span>
+          <span class="placeholder col-4"></span>
+          <span class="placeholder col-4"></span>
+          <span class="placeholder col-6"></span>
+          <span class="placeholder col-8"></span>
+        </p>
+        <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
+      </div>
+    </div>
+    <button type="button" class="btn btn-outline-primary" id="carica" v-on:click="newGetpost()" >Vai Avanti con il catalogo</button>
+    <button class="btn btn-primary invisibile" type="button" disabled>
+      <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+      Loading...
+    </button>
   </div>
-
+  
 
 
 </div>
 
 
-</div>3
+</div>
+    <script src="./Components/Listafilm.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
    

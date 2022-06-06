@@ -7,7 +7,7 @@
                                                 
 }
 body{
-    background-color: black;
+    background-color: #ccffe6;
 }
 .nome{
     text-align: center;
@@ -62,7 +62,13 @@ padding-bottom: 10%;
     width: 50px;
 
 }
+.immaginifilm{
+    border-radius: 80px;
+}
 .datarilascio{
     font-size: 25px;
     color: #CCCCFF;
+}
+.invisibile{
+    display:none;
 }
