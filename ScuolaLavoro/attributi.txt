@@ -1,0 +1,48 @@
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card" style="background-color: black;">
+      <div class="card-body">
+                <div class="card-body" style="background-color: black;">
+                <p class="view"><img v-bind:src="view" class="viewimg">  {{movie.popularity}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card style="background-color: black;"">
+
+      <div class="card-body">
+             <p class="lingua"><img v-bind:src="linguaOG " class="linguaOG">lingua originale  {{movie.original_language}}
+            
+      </div>
+    </div>
+       <div class="card style="background-color: black;"">
+
+      <div class="card-body">
+                <p class="voto">voto {{movie.vote_average}}/10<img v-bind:src="Image"class="stella"></p> 
+              
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+            <div class="card-group">
+              <div class="card " style="background-color: black;">
+            
+                <div class="card-body" style="background-color: black;">
+                <p class="view"><img v-bind:src="view" class="viewimg">  {{movie.popularity}}</p>
+            
+                </div>
+              </div>
+              <div class="card" style="background-color: black;">
+                
+                <div class="card-body" style="background-color: black;">
+             <p class="lingua"><img v-bind:src="linguaOG " class="linguaOG">lingua originale  {{movie.original_language}}
+                </div>
+              </div>
+              <div class="card "style="background-color: black;">
+                <div class="card-body"style="background-color: black;">
+                <p class="voto">voto {{movie.vote_average}}/10<img v-bind:src="Image"class="stella"></p> 
+                </div>
+              </div>
+            </div>
